@@ -8,6 +8,17 @@ public class Main{
         moveRobot(robot, 3, 0);
         System.out.printf("And now position of robot: %d %d",robot.getX(), robot.getY());
         System.out.println(" , direction: " + robot.getDirection() );
+
+        System.out.println();
+
+        Robot robot2 = new Robot( Direction.DOWN, -2, 4 );
+        System.out.printf("Start position of robot2: %d %d",robot2.getX(), robot2.getY());
+        System.out.println(" , direction: " + robot.getDirection() );
+
+        moveRobot(robot2, 5, -4);
+        System.out.printf("And now position of robot2: %d %d",robot2.getX(), robot2.getY());
+        System.out.println(" , direction: " + robot2.getDirection() );
+
     }
 
     public static void moveRobot(Robot robot, int toX, int toY){
