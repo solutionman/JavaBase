@@ -23,43 +23,44 @@ public class Main{
 
     public static void moveRobot(Robot robot, int toX, int toY){
 
-        if(toX != 0 ){
+        if(toX != robot.getX() ){
             // find first direction
-            if(toX > 0){
+            if(toX > robot.getX()){
                 while(!robot.getDirection().equals( Direction.RIGHT )){
                     robot.turnRight();
                 }
-                for(int i = 0; i < toX; i++){
+                for(int i = robot.getX(); i < toX; i++){
                     robot.stepForward();
                 }
-            } else {
+            } else if(toX < robot.getX()) {
                 while( !robot.getDirection().equals( Direction.LEFT ) ){
                     robot.turnLeft();
                 }
-                for(int i = 0; i > toX; i--){
+                for(int i = robot.getX(); i > toX; i--){
                     robot.stepForward();
                 }
             }
         }
 
         // find second direction
-        if(toY != 0){
-            if(toY > 0){
+        if(toY != robot.getY()){
+            if(toY > robot.getY()){
                 while( !robot.getDirection().equals(Direction.UP) ){
                     robot.turnLeft();
                 }
-                for(int i = 0; i < toY; i++){
+                for(int i = robot.getY(); i < toY; i++){
                     robot.stepForward();
                 }
-            } else {
+            } else if ( toY < robot.getY() ) {
                 while( !robot.getDirection().equals(Direction.DOWN)){
                     robot.turnRight();
                 }
-                for(int i = 0; i > toY; i-- ){
+                for(int i = robot.getY(); i > toY; i-- ){
                     robot.stepForward();
                 }
             }
         }
+
         //robot.turnRight();
         //robot.turnLeft();
         //robot.stepForward();
