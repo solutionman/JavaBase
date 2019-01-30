@@ -43,10 +43,10 @@ public class Robot{
 
     public void stepForward(){
         if(direction.equals( Direction.UP ) ){
-            this.X++;
+            this.Y++;
         }
         if(direction.equals( Direction.RIGHT )){
-            this.Y++;
+            this.X++;
         }
         if(direction.equals( Direction.DOWN )){
             this.Y--;

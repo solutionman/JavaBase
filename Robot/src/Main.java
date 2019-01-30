@@ -60,13 +60,6 @@ public class Main{
                 }
             }
         }
-
-        //robot.turnRight();
-        //robot.turnLeft();
-        //robot.stepForward();
-        //robot.stepForward();
-        //robot.stepForward();
-
     }
 }
 
